@@ -228,6 +228,10 @@
     <Compile Include="Migrations\201609100133008_AddNotification.Designer.cs">
       <DependentUpon>201609100133008_AddNotification.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609101503529_ChangeOriginalValueToOriginalVenue.cs" />
+    <Compile Include="Migrations\201609101503529_ChangeOriginalValueToOriginalVenue.Designer.cs">
+      <DependentUpon>201609101503529_ChangeOriginalValueToOriginalVenue.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Attendance.cs" />
@@ -355,6 +359,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609100133008_AddNotification.resx">
       <DependentUpon>201609100133008_AddNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609101503529_ChangeOriginalValueToOriginalVenue.resx">
+      <DependentUpon>201609101503529_ChangeOriginalValueToOriginalVenue.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

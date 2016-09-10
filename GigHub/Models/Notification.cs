@@ -9,7 +9,7 @@ namespace GigHub.Models
         public DateTime DateTime { get; private set; }
         public NotificationType Type { get; private set; }
         public DateTime? OriginalDateTime { get; set; }
-        public string OriginalValue { get; set; }
+        public string OriginalVenue { get; set; }
 
         [Required]
         public Gig Gig { get; private set; }
