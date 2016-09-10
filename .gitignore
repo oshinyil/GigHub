@@ -6,3 +6,7 @@
 /GigHub.v12.suo
 /GigHub/bin
 /GigHub/obj
+/.vs
+/GigHub/App_Data/aspnet-GigHub-20160723095837_log.ldf
+/GigHub/App_Data/aspnet-GigHub-20160723095837.mdf
+/GigHub/GigHub.csproj.user
