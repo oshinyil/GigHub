@@ -20,7 +20,7 @@ namespace GigHub.Models
 
         public Notification(NotificationType type, Gig gig)
         {
-            if (Gig == null)
+            if (gig == null)
             {
                 throw new ArgumentNullException("gig");
             }
