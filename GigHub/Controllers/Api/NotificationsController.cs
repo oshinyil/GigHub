@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using GigHub.Dtos;
 using GigHub.Models;
 using Microsoft.AspNet.Identity;
 using System.Collections.Generic;
