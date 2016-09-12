@@ -52,7 +52,10 @@
                 html: true,
                 title: "Notifications",
                 content: function () {
-                    return "Hellow World"
+                    var compiled = _.template("Hello <%= name %>");
+                    var html = compiled({ name: "Oshi" });
+
+                    return html;
                 },
                 placement: "bottom"
             });
