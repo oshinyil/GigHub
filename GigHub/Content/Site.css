@@ -178,5 +178,8 @@ h6,
   border-bottom: none;
 }
 #searchGigs {
-  width: 300px;
+  width: 400px;
+}
+#searchGigs input {
+  max-width: none;
 }
