@@ -14,7 +14,7 @@
         </div>
     </div>
 }
-<ul class="gigs voffset4">
+<ul id="gigs" class="gigs voffset4">
     @foreach (var gig in Model.UpcomingGigs)
     {
         <li>
@@ -46,13 +46,10 @@
                 </span>
                 @if (Model.ShowActions && !gig.IsCanceled)
                 {
-                    <button 
-                        data-gig-id="@gig.Id"
-                        class="btn
+                    <button data-gig-id="@gig.Id"
+                            class="btn
                             @(Model.Attendances.Contains(gig.Id) ? "btn-info" : "btn-default")
-                            btn-sm pull-right js-toggle-attendance">
-                        Going?
-                    </button>
+                            btn-sm pull-right js-toggle-attendance">@(Model.Attendances.Contains(gig.Id) ? "Going" : "Going?")</button>
                 }
             </div>
         </li>
@@ -62,7 +59,7 @@
 {
     <script>
         $(document).ready(function () {
-            GigsController.init();
+            GigsController.init("#gigs");
 
             $(".js-toggle-follow").click(function (e) {
                 var button = $(e.target);
