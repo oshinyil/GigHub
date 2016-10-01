@@ -1,8 +1,5 @@
 ﻿using GigHub.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using GigHub.Repositories;
 
 namespace GigHub.Persistence
 {
@@ -10,9 +7,18 @@ namespace GigHub.Persistence
     {
         private ApplicationDbContext _context;
 
+        public GigRepository Gigs { get; private set; }
+        public AttendanceRepository Attendances { get; private set; }
+        public FollowingRepository Followings { get; private set; }
+        public GenreRepository Genres { get; private set; }
+
         public UnitOfWork(ApplicationDbContext context)
         {
             _context = context;
+            Gigs = new GigRepository(_context);
+            Attendances = new AttendanceRepository(_context);
+            Followings = new FollowingRepository(_context);
+            Genres = new GenreRepository(_context);
         }
 
         public void Complete()
