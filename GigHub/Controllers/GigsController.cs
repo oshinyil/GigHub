@@ -11,9 +11,9 @@ namespace GigHub.Controllers
     {
         private readonly IUnitOfWork _unitOfWork;
 
-        public GigsController()
+        public GigsController(IUnitOfWork unitOfWork)
         {
-            _unitOfWork = new UnitOfWork(new ApplicationDbContext());
+            _unitOfWork = unitOfWork;
         }
 
         [Authorize]
@@ -131,7 +131,6 @@ namespace GigHub.Controllers
             }
 
             gig.Modify(viewModel.GetDateTime(), viewModel.Venue, viewModel.Genre);
-
             _unitOfWork.Complete();
 
             return RedirectToAction("Mine", "Gigs");
@@ -157,9 +156,7 @@ namespace GigHub.Controllers
             if (User.Identity.IsAuthenticated)
             {
                 var userId = User.Identity.GetUserId();
-
                 viewModel.IsAttending = _unitOfWork.Attendances.GetAttendance(gig.Id, userId) != null;
-
                 viewModel.IsFollowing = _unitOfWork.Followings.GetFollowing(userId, gig.ArtistId) != null;
             }
 
