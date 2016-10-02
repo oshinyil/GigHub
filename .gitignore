@@ -10,3 +10,5 @@
 /GigHub/App_Data/aspnet-GigHub-20160723095837_log.ldf
 /GigHub/App_Data/aspnet-GigHub-20160723095837.mdf
 /GigHub/GigHub.csproj.user
+/GigHub.Tests/bin/Debug
+/GigHub.Tests/obj/Debug
