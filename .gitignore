@@ -12,3 +12,5 @@
 /GigHub/GigHub.csproj.user
 /GigHub.Tests/bin/Debug
 /GigHub.Tests/obj/Debug
+/GigHub.IntegrationTests/obj/Debug
+/GigHub.IntegrationTests/bin/Debug
