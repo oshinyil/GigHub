@@ -14,20 +14,22 @@ namespace GigHub.Core.Models
         {
         }
 
-        public UserNotification(ApplicationUser user, Notification notifiaction)
+        public UserNotification(ApplicationUser user, Notification notification)
         {
             if (user == null)
             {
                 throw new ArgumentNullException("user");
             }
 
-            if (notifiaction == null)
+            if (notification == null)
             {
                 throw new ArgumentNullException("notification");
             }
 
             User = user;
-            Notification = notifiaction;
+            UserId = user.Id;
+            Notification = notification;
+            NotificationId = notification.Id;
         }
 
         public void Read()
