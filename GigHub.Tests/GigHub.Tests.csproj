@@ -102,6 +102,7 @@
   <ItemGroup>
     <Compile Include="Controllers\Api\GigsControllerTests.cs" />
     <Compile Include="Controllers\Api\AttendancesControllerTests.cs" />
+    <Compile Include="Domain\Models\GigTests.cs" />
     <Compile Include="Extensions\ApiControllerExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
