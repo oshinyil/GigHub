@@ -8,6 +8,7 @@ namespace GigHub.Tests.Domain.Models
     [TestClass]
     public class GigTests
     {
+        [TestMethod]
         public void Cancel_WhenCalled_ShouldSetIsCanceledToTrue()
         {
             var gig = new Gig();
